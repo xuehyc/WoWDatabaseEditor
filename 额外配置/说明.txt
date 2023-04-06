@@ -1,0 +1,10 @@
+﻿WoW Database Editor is using git submodules, therefore after you clone, after you pull you have to download submodules:
+
+git submodule update --init --recursive
+
+Now you can open the solution in Visual Studio or other C#/.NET IDE and build. Start LoaderAvalonia project (this part is important!)
+
+要构建要分发的版本，请执行以下操作：
+
+-- Windows version
+dotnet publish -c Release --self-contained false -f net6.0 -o bin/wowdatabaseeditor-avalonia-win/ LoaderAvalonia/LoaderAvalonia.csproj -r win7-x64
